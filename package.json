@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "dev-build": "vue-cli-service build --mode development"
   },
   "dependencies": {
-    "@cityofphiladelphia/phila-vue-comps": "https://github.com/CityOfPhiladelphia/phila-vue-comps#914c529d93a14d4000a69cb72421abd0defbdd12",
+    "@cityofphiladelphia/phila-vue-comps": "https://github.com/CityOfPhiladelphia/phila-vue-comps#23c02c76629a8ac00963c85ee2c1711facfd21f1",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
     "phila-standards": "^1.0.2",
     "vue": "^2.5.22"
   },

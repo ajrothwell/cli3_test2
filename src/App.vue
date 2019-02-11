@@ -1,17 +1,57 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <badge
+      :slots="{
+        title: 'Address or Intersection Found',
+        value: 'test'
+      }"
+    ></badge>
+
+    <callout
+      :slots="{
+        text: 'Address or Intersection Found',
+      }"
+    />
+
+    <vertical-table
+      class="margin-20 margin-bottom-60 medium-8"
+      :slots="{
+        fields: [
+          {
+            label: 'field1',
+            value: 'field1 value',
+          },
+          {
+            label: 'field2',
+            value: 'field2 value',
+          },
+        ]
+      }"
+      :options="{
+        id: 'verticalTableId',
+        externalLink: {
+          action: function() {
+            return 'external link - ';
+          },
+          // action: 'See more',
+          name: 'Atlas',
+          href: 'https://atlas.phila.gov'
+        }
+      }"
+    />
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Badge: () => import(/* webpackChunkName: "pvc_Badge" */'@cityofphiladelphia/phila-vue-comps/src/components/Badge.vue'),
+    Callout: () => import(/* webpackChunkName: "pvc_Callout" */'@cityofphiladelphia/phila-vue-comps/src/components/Callout.vue'),
+    VerticalTable: () => import(/* webpackChunkName: "pvc_VerticalTable" */'@cityofphiladelphia/phila-vue-comps/src/components/VerticalTable.vue'),
   }
 }
 </script>

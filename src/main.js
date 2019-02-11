@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+import '../node_modules/phila-standards/dist/css/phila-app.min.css';
+
 Vue.config.productionTip = false
 
 new Vue({
